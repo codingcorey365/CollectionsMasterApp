@@ -11,19 +11,24 @@ namespace CollectionsMasterConsoleUI
     {
         static void Main(string[] args)
         {
-            //Done: Follow the steps provided in the comments under each region.
+            //Introduction          
+            //Follow the steps provided in the comments under each region.
             //Make the console formatted to display each section well
+            //
             //Utlilize the method stubs at the bottom for the methods you must create ⬇⬇⬇
 
             #region Arrays
-            //Done: Create an integer Array of size 50
+            //1.
+            //Status: Done
+            //Create an integer Array of size 50
             int[] exerciseArrayOfSize50 = new int[50];
 
+            //2.
+            //Status: Done
+            //Create a method to populate the number array with 50 random numbers that are between 0 and 50
+                        
+            Random randomGenerator = new Random();  // Generates a number between 1 to 50
 
-            //Done: Create a method to populate the number array with 50 random numbers that are between 0 and 50
-            // Generates a number between 1 to 50
-            Random randomGenerator = new Random(); 
-            
             for (int i = 0; i < 50; i++)
             {
                 int randomNumber = randomGenerator.Next(1, 50);
@@ -31,26 +36,36 @@ namespace CollectionsMasterConsoleUI
                 exerciseArrayOfSize50[i] = randomNumber;
             }
 
-
-            //Done: Print the first number of the array
+            //3.
+            //Status: Done
+            //Print the first number of the array
 
             Console.WriteLine(exerciseArrayOfSize50[0]);
 
-            // Done: Print the last number of the array            
+            //4.
+            //Status: Done
+            //Print the last number of the array            
             Console.WriteLine(exerciseArrayOfSize50[49]);
 
+            //5.
+            //Status: Done
+            //Print all original numbers.
             Console.WriteLine("All Numbers Original");
             //UNCOMMENT this method to print out your numbers from arrays or lists
             NumberPrinter(exerciseArrayOfSize50);
             Console.WriteLine("-------------------");
 
-            //Done: Reverse the contents of the array and then print the array out to the console.
-            //Try for 2 different ways
-            /*  1) First way, using a custom method => Hint: Array._____(); 
-                2) Second way, Create a custom method (scroll to bottom of page to find ⬇⬇⬇)
-            */
+            //6.
+            //Status: Done
+            //Reverse the contents of the array and then print the array out to the console.
+            //
+            // Try for 2 different ways
+            //  1) First way, using a custom method => Hint: Array._____(); 
+            //  2) Second way, Create a custom method (scroll to bottom of page to find ⬇⬇⬇)
+            
 
             Console.WriteLine("All Numbers Reversed:");
+            //  1) First way, using a custom method => Hint: Array._____(); 
 
             for (int i = 49; i >= 0; i--)
             {
@@ -58,19 +73,24 @@ namespace CollectionsMasterConsoleUI
             }    
 
             Console.WriteLine("---------REVERSE CUSTOM------------");
+            //  2) Second way, Create a custom method (scroll to bottom of page to find ⬇⬇⬇)
 
             ReverseArray(exerciseArrayOfSize50);
 
             Console.WriteLine("-------------------");
 
-            //Done: Create a method that will set numbers that are a multiple of 3 to zero then print to the console all numbers
+            //7.
+            //Status: Done
+            //Create a method that will set numbers that are a multiple of 3 to zero then print to the console all numbers
             Console.WriteLine("Multiple of three = 0: ");
 
             ThreeKiller(exerciseArrayOfSize50);
 
             Console.WriteLine("-------------------");
 
-            //Done: Sort the array in order now
+            //8.
+            //Status: Done
+            //Sort the array in order now
             /*      Hint: Array.____()      */
             Console.WriteLine("Sorted numbers:");
             
@@ -87,18 +107,24 @@ namespace CollectionsMasterConsoleUI
             Console.WriteLine("************Start Lists**************");
 
             /* Set Up */
-            // Done: Create an integer List
+
+            //1.
+            //Status: Done
+            //Create an integer List
 
             List<int> randomNumberList = new List<int>();
 
-
-            //Done: Print the capacity of the list to the console
+            //2.
+            //Status: Done
+            //Print the capacity of the list to the console
             Console.WriteLine(randomNumberList.Count);
             Console.WriteLine(randomNumberList.Capacity);
             Console.WriteLine("look above");
 
-            //Done: Populate the List with 50 random numbers between 0 and 50 you will need a method for this
-                        
+            //3.
+            //Status: Done
+            //Populate the List with 50 random numbers between 0 and 50 you will need a method for this
+
             Random randomNumGenerator = new Random(); 
 
             for (int i = 0; i < 70; i++)
@@ -114,8 +140,9 @@ namespace CollectionsMasterConsoleUI
 
             }
 
-
-            //Done: Print the new capacity
+            //4.
+            //Status: Done
+            //Print the new capacity
             Console.WriteLine("new list capacity");
             Console.WriteLine(randomNumberList.Capacity);
             Console.WriteLine($"The count of the list is {randomNumberList.Count}");
@@ -124,8 +151,13 @@ namespace CollectionsMasterConsoleUI
 
             Console.WriteLine("---------------------");
 
-            //Done: Create a method that prints if a user number is present in the list
-            //Done: What if the user types "abc" accident your app should handle that!
+            //5.
+            //Status: Done
+            //Create a method that prints if a user number is present in the list
+            
+            //6.
+            //Status: Done
+            //What if the user types "abc" accident your app should handle that!
             Console.WriteLine("What number will you search for in the number list?");
 
             IsNumberPresent("55", randomNumberList);
@@ -134,29 +166,36 @@ namespace CollectionsMasterConsoleUI
 
             Console.WriteLine("All Numbers:");
 
-            //Done this method to print out your numbers from arrays or lists
+            //7.
+            //Status: Done
+            //Use this method to print out your numbers from arrays or lists
             NumberPrinter(randomNumberList);
             
             Console.WriteLine("-------------------");
 
-
-            //Done: Create a method that will remove all odd numbers from the list then print results
+            //8.
+            //Status: Done
+            //Create a method that will remove all odd numbers from the list then print results
             Console.WriteLine("Evens Only!!");
 
             OddKiller(randomNumberList);
 
 
             Console.WriteLine("------------------");
-
-            //Done: Sort the list then print results
             
+            //9.
+            //Status: Done
+            //Sort the list then print results
+
             Console.WriteLine("Sorted Evens!!");
 
             OddKiller(randomNumberList);
 
             Console.WriteLine("------------------");
 
-            //TODO: Convert the list to an array and store that into a variable
+            //10.
+            //Status: Done
+            //Convert the list to an array and store that into a variable
 
 
             //string[] str = myList.ToArray();
@@ -167,13 +206,18 @@ namespace CollectionsMasterConsoleUI
                 Console.WriteLine(i); 
             }
 
-            //TODO: Clear the list
+            //11.
+            //Status: Done
+            //Clear the list
 
             randomNumberList.Clear();
 
 
             #endregion
         }
+
+        //------------------------------------------------------- Methods Section -----------------------------------------
+
         #region Private Methods
         private static void ThreeKiller(int[] exerciseArrayOfSize50)
         {
@@ -186,9 +230,8 @@ namespace CollectionsMasterConsoleUI
 
             }
         }
-        
-        
 
+        //------------------------------------------------------- Methods Section -----------------------------------------
         private static void OddKiller(List<int> randomNumberList)
         {
             foreach (int number in randomNumberList.ToList())
@@ -209,6 +252,8 @@ namespace CollectionsMasterConsoleUI
             { Console.WriteLine(item); }
         }
 
+        //------------------------------------------------------- Methods Section -----------------------------------------
+        
         /// <summary>
         /// Returns a bool value 
         /// see https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.contains?view=net-7.0 
@@ -238,10 +283,15 @@ namespace CollectionsMasterConsoleUI
 
             
         }
+
+        //------------------------------------------------------- Methods Section -----------------------------------------
+
         private static void NumberChecker(List<int> numberList, int searchNumber)
         {
 
         }
+
+        //------------------------------------------------------- Methods Section -----------------------------------------
 
         private static void Populater(List<int> numberList)
         {
@@ -256,12 +306,15 @@ namespace CollectionsMasterConsoleUI
             }
         }
 
+        //------------------------------------------------------- Methods Section -----------------------------------------
+
         private static void Populater(int[] numbers)
         {
             Random rng = new Random();
 
         }
-
+        
+        //------------------------------------------------------- Methods Section -----------------------------------------
         private static void ReverseArray(int[] array)
         {
             for (int i = 49; i >= 0; i--)
@@ -275,6 +328,10 @@ namespace CollectionsMasterConsoleUI
         /// </summary>
         /// <typeparam name="T"> Must conform to IEnumerable</typeparam>
         /// <param name="collection"></param>
+        /// 
+
+        //------------------------------------------------------- Methods Section -----------------------------------------
+
         private static void NumberPrinter<T>(T collection) where T : IEnumerable<int>
         {
             //STAY OUT DO NOT MODIFY!!
@@ -285,5 +342,8 @@ namespace CollectionsMasterConsoleUI
         }
         #endregion
 
+        //------------------------------------------------------- Methods Section -----------------------------------------
+
     }
+
 }
